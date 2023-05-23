@@ -40,3 +40,9 @@
 .read-the-docs {
   color: #888;
 }
+
+/* the following class is just for demo purposes. 
+so that I can see the divs etc */
+.border {
+  border: 2px solid black
+}

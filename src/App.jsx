@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import Header from './Header'
+import Body from './Body'
 import './App.css'
 
 function App() {
@@ -8,7 +9,8 @@ function App() {
     <>
       {/* <p>Replace this with a Header Component. </p> */}
       <Header />
-      <p> Body component here</p>
+      {/* <p> Body component here</p> */}
+      <Body />
     </>
   )
 }
