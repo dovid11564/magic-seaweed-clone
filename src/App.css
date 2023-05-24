@@ -46,3 +46,11 @@ so that I can see the divs etc */
 .border {
   border: 2px solid black
 }
+
+.border-1 {
+  border: 2px solid red
+}
+
+.border-2 {
+  border: 2px solid green
+}
