@@ -1,6 +1,19 @@
-
+import { useState, useEffect } from 'react'
 
 function Header() {
+
+    const [dateTime, setDateTime] = useState(null)
+    console.log(import.meta.env.VITE_REACT_APP_DATE_TIME_KEY)
+    useEffect(() => {
+        // console.log(REACT_APP_DATE_TIME_KEY)
+        fetch( {/* this is where the geolocation key goes*/} 
+        // {import.meta.env.REACT_APP_DATE_TIME_KEY}
+        )
+        .then(res => res.json())
+        .then(data => setDateTime(data))
+    }, [])
+
+
     return (
         <>
             <div className='border'>
