@@ -5,6 +5,7 @@ function Waves() {
     return(
         <>
         <div className='border'>
+            Waves Component
             <p className='border-1'>Render Wave Size:</p>
             <p className='border-2'>Render Swell:</p>
             <p className='border-1'>Render Compass Direction:</p>
