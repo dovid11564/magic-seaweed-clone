@@ -1,4 +1,7 @@
+
 import { useState, useEffect } from 'react'
+import Time from './Time';
+import Name from './Name';
 
 function Header() {
 
@@ -19,10 +22,9 @@ function Header() {
         <>
             <div className='border'>
                 Header Component
-                <p className='border-1'>Render Beach Name:</p>
-                <p className='border-2'>Render Local Date/Time:
-                    {dateTime?.formatted}
-                </p>
+                <Name />
+                <Time dateTime={dateTime}/>
+
             </div>
         </>
     )
