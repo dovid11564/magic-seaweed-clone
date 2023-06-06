@@ -7,9 +7,7 @@ function App() {
 
   return (
     <>
-      {/* <p>Replace this with a Header Component. </p> */}
       <Header />
-      {/* <p> Body component here</p> */}
       <Body />
     </>
   )
