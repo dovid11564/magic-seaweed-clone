@@ -8,6 +8,7 @@ const [waves, setWaves] = useState(null)
         .then(res => res.json())
         .then(data => setWaves(data))
     })
+
     return (
         <>
             <div className='border'>
