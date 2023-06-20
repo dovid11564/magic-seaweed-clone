@@ -17,6 +17,7 @@ export default ({ command, mode }) => {
         },
         define: {
             __APP_ENV__:  JSON.stringify('env.REACT_APP_DATE_TIME_KEY'),
+            __APP_ENV2__: JSON.stringify('env.REACT_APP_WAVES_KEY')
         }
     });
 }

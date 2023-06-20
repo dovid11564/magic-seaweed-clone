@@ -4,7 +4,7 @@ function Waves() {
 
 const [waves, setWaves] = useState(null)
     useEffect(() => {
-        fetch('https://marine-api.open-meteo.com/v1/marine?latitude=40.59&longitude=-73.80&hourly=wave_height&length_unit=imperial&timezone=America%2FNew_York')
+        fetch(`${import.meta.env.VITE_REACT_APP_WAVES_API}`)
         .then(res => res.json())
         .then(data => setWaves(data))
     })
