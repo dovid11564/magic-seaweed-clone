@@ -34,9 +34,11 @@ function Waves() {
             <div className='border'>
                 Waves Component
                 <p className='border-1'>Render Wave Size: <b>{waves?.hourly.wave_height[0]} </b>feet</p>
-                <p className='border-2'>Render Swell:</p>
+                <p className='border-2'>Render Swell Height: <b>{waves?.hourly.swell_wave_height[0]}</b> feet</p>
+                <p className='border-1'>Render Swell Period: <b>{waves?.hourly.swell_wave_period[0]}</b> seconds</p>
+                <p className='border-2'>Render Swell Direction: <b>{getDirection(waves?.hourly.swell_wave_direction[0])}</b></p>
                 <p className='border-1'>Render Wave Compass Direction: <b>{getDirection(waves?.hourly.wave_direction[0])}</b></p>
-                <p className='border-2'>Render Star Rating:</p>
+                <p className='border-2'>Render Star Rating: <b></b></p>
             </div>
         </>
     )
