@@ -2,6 +2,7 @@
 
 import Time from './Time';
 import Name from './Name';
+import Modal from './Modal'
 
 function Header() {
     return (
@@ -10,7 +11,7 @@ function Header() {
                 Header Component
                 <Name />
                 <Time />
-
+                <Modal />
             </div>
         </>
     )
