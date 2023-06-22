@@ -1,6 +1,6 @@
-import Wind from './Wind'
-import Waves from './Waves'
-import Tempurature from './Tempurature'
+import Wind from './pages/overview/Wind'
+import Waves from './pages/overview/Waves'
+import Tempurature from './pages/overview/Tempurature'
 
 function Body() {
     return (

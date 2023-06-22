@@ -1,5 +1,5 @@
-import { useState } from 'react'
-import Header from './Header'
+
+import Header from './pages/header/Header'
 import Body from './Body'
 import './App.css'
 
