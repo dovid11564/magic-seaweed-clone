@@ -1,3 +1,4 @@
+import "./Wind.css"
 import { useEffect, useState } from 'react'
 
 function Wind() {

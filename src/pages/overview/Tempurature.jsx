@@ -1,4 +1,4 @@
-
+import "./Tempurature.css"
 
 function Tempurature() {
     return (

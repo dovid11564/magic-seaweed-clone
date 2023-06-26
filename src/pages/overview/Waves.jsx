@@ -1,3 +1,4 @@
+import './Waves.css'
 import { useEffect, useState } from 'react'
 
 function Waves() {
