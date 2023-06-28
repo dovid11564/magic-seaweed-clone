@@ -6,7 +6,6 @@ import Tempurature from './pages/overview/Tempurature'
 function Body() {
     return (
         <div className='body'>
-            <p>body component</p>
             <Waves />
             <Wind />
             <Tempurature />
