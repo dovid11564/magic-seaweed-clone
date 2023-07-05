@@ -5,7 +5,7 @@ import Tempurature from './pages/overview/Tempurature'
 
 function Body() {
     return (
-        <div className='body'>
+        <div className='flex justify-between items-stretch'>
             <Waves />
             <Wind />
             <Tempurature />
