@@ -7,7 +7,14 @@ export default {
   theme: {
     extend: {
       colors: {
-        'background': '#FFFBEB'
+        button1: '#2B65EC',
+        button2: '#C2B280'
+      },
+      spacing: {
+        custom: '1.8em',
+      },
+      borderWidth: {
+        bHeight: '5px'
       }
     },
   },
