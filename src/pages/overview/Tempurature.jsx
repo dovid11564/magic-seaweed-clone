@@ -1,9 +1,9 @@
-
+// import "./Tempurature.css"
 
 function Tempurature() {
     return (
         <>
-            <div className='border'>
+            <div className='text-center flex-1'>
                 Tempurature Component
                 <p className='border-1'>Render Land Temp:</p>
                 <p className='border-2'>Render Water Temp:</p>
