@@ -1,4 +1,4 @@
-import './Waves.css'
+// import './Waves.css'
 import { useEffect, useState } from 'react'
 
 function Waves() {
@@ -9,7 +9,7 @@ function Waves() {
             .then(res => res.json())
             .then(data => setWaves(data))
     }, [])
-    console.log(waves)
+    
 
     function getDirection(angle) {
         if (angle >= 337.5 || angle < 22.5) {
@@ -32,7 +32,7 @@ function Waves() {
     }
     return (
         <>
-            <div className='border'>
+            <div className='text-center flex-1'>
                 Waves Component
                 <p className='border-1'>Render Wave Size: <b>{waves?.hourly.wave_height[0]} </b>feet</p>
                 <p className='border-2'>Render Swell Height: <b>{waves?.hourly.swell_wave_height[0]}</b> feet</p>

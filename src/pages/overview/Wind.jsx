@@ -1,4 +1,4 @@
-import "./Wind.css"
+// import "./Wind.css"
 import { useEffect, useState } from 'react'
 
 function Wind() {
@@ -18,7 +18,7 @@ function Wind() {
 
     return (
         <>
-            <div className='border'>
+            <div className='text-center flex-1'>
                 Wind Component
                 <p className='border-1'>Render Wind Speed: <b>{wind?.windSpeed}</b></p>
                 <p className='border-2'>Render Onshore?: </p>
