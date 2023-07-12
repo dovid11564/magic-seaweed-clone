@@ -7,7 +7,7 @@ import Body from './Body'
 function App() {
 
   return (
-    <div class="bg-black border-black">
+    <div>
       <Header />
       <Body />
     </div>
