@@ -22,9 +22,9 @@ function App() {
       .then(res => res.json())
       .then(data => {
         console.log(data.properties.periods[0])
-        // setWind(data.properties.periods[0])
-        // setTemp(data.properties.periods[0])
-        // setWeather(data.properties.periods[0])
+        setWind(data.properties.periods[0])
+        setTemp(data.properties.periods[0])
+        setWeather(data.properties.periods[0])
       })
   }, [forecast])
 

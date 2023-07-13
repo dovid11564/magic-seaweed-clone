@@ -10,7 +10,7 @@ import Modal from './Modal'
 import Time from './Time'
 import Name from './Name'
 
-function Header(weather) {
+function Header({weather}) {
   return (
     <div className="flex-col">
     <div className="flex justify-between">
