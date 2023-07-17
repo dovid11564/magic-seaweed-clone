@@ -36,6 +36,7 @@
     clip-path: polygon(calc(0.577*var(--h)) 0,100% 0,100% 100%,0 100%);
     margin: 0 0 0 calc(-0.288*var(--h));
     padding: 0 0 0 calc(0.288*var(--h));
+    z-index: 100;
   }
   .buttons button:focus-visible {
     outline-offset: calc(-2*var(--b));
@@ -66,13 +67,14 @@
     color: #fff;
   }
   
-  body {
+  /* body {
+    width: 100%;
     display: grid;
     place-content: center;
     margin: 0;
     height: 100vh;
     font-family: system-ui, sans-serif;
-  } 
+  }  */
 
   
 
