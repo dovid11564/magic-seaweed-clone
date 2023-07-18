@@ -8,7 +8,7 @@ function App() {
 
   const [forecast, setForecast] = useState("")
   useEffect(() => {
-    fetch(' https://api.weather.gov/points/40.5891,-73.8010')
+    fetch('https://api.weather.gov/points/40.5891,-73.8010')
       .then(res => res.json())
       .then(data => setForecast(data.properties.forecast))
   }, [])
