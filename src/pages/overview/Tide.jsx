@@ -23,14 +23,14 @@ ChartJS.register(
 
 function Tide() {
 
-    const day = "today"
-    const exampleNum = 9
+    const day = "today" //can I keep this in an array? would that transfer nicely? maybe as some kind of state change
+    const exampleNum = 4
     const data = {
-        labels: ['Mon', `${day}`, 'Wed'],
+        labels: ['CT', `${day}`, 'CT + 2', 'CT + 3', 'CT + 4', 'CT + 5', 'CT + 6', 'CT + 7', 'CT + 8', 'CT + 9', 'CT + 10', 'CT + 11', 'CT + 12'],
         datasets: [
             {
-                label: 'Sales of the Week',
-                data: [3, `${exampleNum}`, 0],
+                label: 'Tide over next day',
+                data: [3, `${exampleNum}`, 5, 6, 7, 6, 5.4, 4 ],
                 backgroundColor: 'aqua',
                 borderColor: 'black',
                 pointBorderColor: 'white',
@@ -58,6 +58,7 @@ function Tide() {
     //the following two need to be in year-month-day format
     const today = "today"
     const yomayim = "in two days"
+    //send a request in postman to figure out what the data is we need. then learn how to cache. 
     // useEffect(() => {
     //     fetch(`https://api.stormglass.io/v2/tide/sea-level/point?lat=${lat}&lng=${lng}&start=2020-02-24&end=2020-02-25`, {
     //         headers: {
