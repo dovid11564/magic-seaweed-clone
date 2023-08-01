@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useState, useMemo } from 'react'
 import { Line } from 'react-chartjs-2';
 import {
     Chart as ChartJS,
@@ -22,16 +22,21 @@ ChartJS.register(
 )
 
 function Tide() {
-
+    // const [tideCache, setTideCache] = useState(null)
     const [tide, setTide] = useState(null)
+
+
+    const sgData = tide?.map((item) => item.sg);
+    const timeLabels = tide?.map((item) => item.time);
+
     const day = "today" //can I keep this in an array? would that transfer nicely? maybe as some kind of state change
     const exampleNum = 4
     const data = {
-        labels: [`${tide}`, `${day}`, 'CT + 2', 'CT + 3', 'CT + 4', 'CT + 5', 'CT + 6', 'CT + 7', 'CT + 8', 'CT + 9', 'CT + 10', 'CT + 11', 'CT + 12'],
+        labels: timeLabels,
         datasets: [
             {
                 label: 'Tide over next day',
-                data: [3, `${exampleNum}`, 5, 6, 7, 6, 5.4, 4 ],
+                data: sgData,
                 backgroundColor: 'aqua',
                 borderColor: 'black',
                 pointBorderColor: 'white',
@@ -46,35 +51,45 @@ function Tide() {
             legend: true
         },
         scales: {
-            y:{
+            y: {
                 min: 0,
                 max: 10
             }
         }
     }
 
-    
+
     const lat = "40.5891"
     const lng = "-73.8010"
     //the following two need to be in year-month-day format
     const today = "today"
     const yomayim = "in two days"
-    //send a request in postman to figure out what the data is we need. then learn how to cache. 
+    //need to make a var that is for the day and time
     useEffect(() => {
-        fetch(`https://api.stormglass.io/v2/tide/sea-level/point?lat=${lat}&lng=${lng}&start=2020-02-24&end=2020-02-25`, {
+        fetch(`https://api.stormglass.io/v2/tide/sea-level/point?lat=${lat}&lng=${lng}&start=2020-02-24&end=2020-02-26`, {
             headers: {
                 'Authorization': `${import.meta.env.VITE_REACT_APP_STORMGLASS}`
             }
         })
-        .then(res => res.json())
-        .then(data => setTide(data))
+            .then(res => res.json())
+            .then(data => setTide(data))
     }, [])
 
-    console.log(tide)
+    // console.log(tide)
+
+    // const tideData = tide.map((data) => ({
+    //     sg: data.sg
+    // }))
+
+
     return (
         <div> this is tide component
             <div>
                 {/* style this div to effect the chart as desired */}
+
+                {/* {tide?.map((sgValue, index) => (
+                    <Line key={index} sg={sgValue} options={options} />
+                ))} */}
                 <Line
                     data={data}
                     options={options}
