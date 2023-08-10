@@ -29,15 +29,15 @@ function Tide() {
     const lat = "40.5891"
     const lng = "-73.8010"
 
-useEffect(() => {
-        fetch(`https://api.stormglass.io/v2/tide/sea-level/point?lat=${lat}&lng=${lng}&start=2020-02-24&end=2020-02-26`, {
-            headers: {
-                'Authorization': `${import.meta.env.VITE_REACT_APP_STORMGLASS}`
-            }
-        })
-            .then(res => res.json())
-            .then(data => setTide(data))
-    }, [])
+// useEffect(() => {
+//         fetch(`https://api.stormglass.io/v2/tide/sea-level/point?lat=${lat}&lng=${lng}&start=2020-02-24&end=2020-02-26`, {
+//             headers: {
+//                 'Authorization': `${import.meta.env.VITE_REACT_APP_STORMGLASS}`
+//             }
+//         })
+//             .then(res => res.json())
+//             .then(data => setTide(data))
+//     }, [])
 
     // const sgData = tide?.map((item) => item.sg);
     // const timeLabels = tide?.map((item) => item.time);
