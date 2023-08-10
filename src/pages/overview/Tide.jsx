@@ -23,11 +23,27 @@ ChartJS.register(
 
 function Tide() {
     // const [tideCache, setTideCache] = useState(null)
-    const [tide, setTide] = useState(null)
+    const [tide, setTide] = useState([])
 
 
-    const sgData = tide?.map((item) => item.sg);
-    const timeLabels = tide?.map((item) => item.time);
+    const lat = "40.5891"
+    const lng = "-73.8010"
+
+useEffect(() => {
+        fetch(`https://api.stormglass.io/v2/tide/sea-level/point?lat=${lat}&lng=${lng}&start=2020-02-24&end=2020-02-26`, {
+            headers: {
+                'Authorization': `${import.meta.env.VITE_REACT_APP_STORMGLASS}`
+            }
+        })
+            .then(res => res.json())
+            .then(data => setTide(data))
+    }, [])
+
+    // const sgData = tide?.map((item) => item.sg);
+    // const timeLabels = tide?.map((item) => item.time);
+    const sgData = tide ? tide.map((item) => item.sg) : "loading...";
+    const timeLabels = tide ? tide.map((item) => item.time) : "loading...";
+
 
     const day = "today" //can I keep this in an array? would that transfer nicely? maybe as some kind of state change
     const exampleNum = 4
@@ -59,27 +75,20 @@ function Tide() {
     }
 
 
-    const lat = "40.5891"
-    const lng = "-73.8010"
+    
     //the following two need to be in year-month-day format
     const today = "today"
     const yomayim = "in two days"
     //need to make a var that is for the day and time
-    useEffect(() => {
-        fetch(`https://api.stormglass.io/v2/tide/sea-level/point?lat=${lat}&lng=${lng}&start=2020-02-24&end=2020-02-26`, {
-            headers: {
-                'Authorization': `${import.meta.env.VITE_REACT_APP_STORMGLASS}`
-            }
-        })
-            .then(res => res.json())
-            .then(data => setTide(data))
-    }, [])
+    
 
     // console.log(tide)
 
     // const tideData = tide.map((data) => ({
     //     sg: data.sg
     // }))
+
+ 
 
 
     return (
