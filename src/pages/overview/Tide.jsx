@@ -36,7 +36,7 @@ function Tide() {
 //             }
 //         })
 //             .then(res => res.json())
-//             .then(data => setTide(data))
+//             .then(data => setTide(data.data))
 //     }, [])
 
     // const sgData = tide?.map((item) => item.sg);
