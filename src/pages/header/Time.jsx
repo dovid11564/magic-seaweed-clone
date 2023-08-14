@@ -11,13 +11,16 @@ function Time() {
             .then(data => setDateTime(data))
     }, [])
 
+    const dateString = "2023-07-22T06:00:00-04:00";
+    const parsedDate = new Date(dateString);
+    console.log(parsedDate)
 
     return (
         <>
-        <div className="mt-2 flex items-center text-sm text-gray-500">
-            <ClockIcon className="mr-1.5 h-5 w-5  flex-shrink-0 text-gray-400" aria-hidden="true" />
-            {dateTime?.formatted}
-          </div>
+            <div className="mt-2 flex items-center text-sm text-gray-500">
+                <ClockIcon className="mr-1.5 h-5 w-5  flex-shrink-0 text-gray-400" aria-hidden="true" />
+                {/* {formattedTime} */}
+            </div>
             {/* <p className='border-2'>Render Local Date/Time: <b>{dateTime?.formatted}</b> </p> */}
         </>
     )
